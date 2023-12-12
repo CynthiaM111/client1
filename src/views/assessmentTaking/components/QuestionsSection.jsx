@@ -174,7 +174,7 @@ const QuestionsSection = (props) => {
 
       <Divider />
 
-      {assessment.questionsType === 'online' && (
+      {assessment?.questionsType === 'online' && (
         <QuestionList
           questions={assessment.questions}
           answers={answers}
@@ -183,11 +183,11 @@ const QuestionsSection = (props) => {
         />
       )}
 
-      {assessment.questionsType === 'file' && (
+      {assessment?.questionsType === 'file' && (
         <FileDisplay files={assessment.files} />
       )}
 
-      {assessment.submissionType === 'written' && (
+      {assessment?.submissionType === 'written' && (
         <>
           <Divider />
           <Title level={5}>Upload your answer</Title>
