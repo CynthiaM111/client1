@@ -18,7 +18,7 @@ const getAllAssignments = async (courseId) => {
     params: { filter: 'Assignment' }
   })
   console.log('APIService:', response);
-  onsole.log('API getAllAssignments Response:', response.data);
+  console.log('API getAllAssignments Response:', response.data);
   return response.data
 }
 
