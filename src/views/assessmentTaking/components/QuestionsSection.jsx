@@ -42,12 +42,14 @@ const QuestionsSection = (props) => {
   const { assessment } = submission
 
   useEffect(() => {
+    if (submission && submission.files) {
     setFiles(
       submission.files.map((file) => {
         return { ...file, uid: file._id }
       })
     )
-  }, [])
+    }
+  }, [submission])
 
   const handleAnswerSubmit = (questionId, newAnswer) => {
     dispatch(
