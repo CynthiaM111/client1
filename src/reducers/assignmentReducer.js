@@ -29,8 +29,8 @@ export const getAllAssignments = (courseId) => {
     try {
       dispatch({ type: LOAD_ASSIGNMENTS })
       const response = await assessmentsService.getAllAssignments(courseId)
-      console.log('APIReducer: ', typeof response )
-      console.log('APIReducer:',response)
+      console.log(typeof response )
+      console.log(response)
 
 
       dispatch({ type: GET_ALL_ASSIGNMENTS, data: response })
