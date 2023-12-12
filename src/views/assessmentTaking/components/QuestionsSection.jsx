@@ -147,7 +147,7 @@ const QuestionsSection = (props) => {
     >
       <FlexSectionHeader>
         <Space>
-          <Title level={3}>{assessment.title}</Title>
+          <Title level={3}>{assessment?.title}</Title>
           {submission.submittedAt && assessment.type === 'Assignment' && (
             <>
               <Text type="secondary">Submitted at:</Text>
