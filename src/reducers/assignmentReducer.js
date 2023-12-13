@@ -33,8 +33,10 @@ export const getAllAssignments = (courseId) => {
       console.log(response)
 
 
+      if(Array.isArray(response)){
       dispatch({ type: GET_ALL_ASSIGNMENTS, data: response })
-    } catch (error) {
+    }} 
+    catch (error) {
       console.log(error)
       notification.error({
         message: "Couldn't load Assignments check your connection"
