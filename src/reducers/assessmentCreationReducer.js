@@ -30,7 +30,11 @@ const assessmentCreationReducer = (state = { questions: [] }, action) => {
         questions: action.data
       }
     case SUBMIT_ASSESSMENT:
-      return state
+      return {
+        ...state,
+        questions:action.data
+
+      }
     case CLEAR:
       return { questions: [] }
     default:
