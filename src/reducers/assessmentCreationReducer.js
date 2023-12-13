@@ -32,7 +32,7 @@ const assessmentCreationReducer = (state = { questions: [] }, action) => {
     case SUBMIT_ASSESSMENT:
       return {
         ...state,
-        questions:[]
+        questions:action.data
 
       }
     case CLEAR:
