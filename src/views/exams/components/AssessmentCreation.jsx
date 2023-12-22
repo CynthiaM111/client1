@@ -74,11 +74,13 @@ const AssessmentCreation = (props) => {
   }
 
   const getMaxScore = () => {
-    return questions.reduce((acumalator, item) => {
-      if (item.points) return acumalator + item.points
+    if (Array.isArray(questions)){
+       return questions.reduce((acumalator, item) => {
+           if (item.points) return acumalator + item.points
       return acumalator
     }, 0)
   }
+  return 0;}
 
   return (
     <Row gutter={[16, 16]}>
